@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <div class="bg-image"></div>
+    <head>
+        <meta charset="UTF-8">
+        <title>Visualization Assignment 2 - Part 2</title>
+        <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="Stylesheets/style.css"/>
+        <link rel="stylesheet" href="Stylesheets/chart.css"/>      
+        <script src="Biplot.js"></script>
+        <script src="BarGraph_Eigenval.js"></script>
+        <script src="ScatterPlotMatrix.js"></script>
+        <script src="helper.js"></script>
+        <script src="MDS_Correlation.js"></script>
+        <script src="MDS_Euclidian.js"></script>
+        <script src="Pcp.js"></script>
+
+    </head>
+
+    <body>
+       
+        <div class="navbar">
+            <div class="dropdown">
+                <button id = "ScreeButton" onclick="PlotScree()" class="dropbtn">Scree Plot</button>
+                <button  id = "BiPlotButton" onclick="PlotBiPlot()" class="dropbtn">BiPlot</button>
+                <button  id = "Mds_EuclidianButton" onclick="PlotMds_Euc()" class="dropbtn">MDS Euclidian</button>
+                <button  id = "Mds_CorrelationButton" onclick="PlotMds_Corr()" class="dropbtn">MDS Attributes</button>
+                <button  id = "PcpButton" onclick="PlotPcp()" class="dropbtn">PCP plot</button>
+            </div>
+           
+        </div>
+
+        <div id="svgbox" class="svgbox" >
+            <svg id="mysvg" width="724" height="724" className="chart"></svg>
+        </div>
+
+    </body>
+
+        <div class="column1">
+            <img src="Images/Ronaldo1.jpg" alt="Rating card1" width="200" height="250">
+        </div>
+        <div class="column2">
+            <img src="Images/Mbappe.jpg" alt="Rating card2" width="200" height="250">
+        </div>
+        <div class="column3">
+            <img src="Images/Neymar.jpg" alt="Rating card2" width="200" height="250">
+        </div>
+        <div class="column4">
+            <img src="Images/Ramos.jpg" alt="Rating card2" width="200" height="250">
+        </div>
+
+</html>
