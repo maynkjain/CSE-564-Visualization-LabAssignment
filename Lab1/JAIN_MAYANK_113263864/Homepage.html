@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <div class="bg-image"></div>
+    <head>
+        <meta charset="UTF-8">
+        <title>Visualization Assignment 1</title>
+        <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="Stylesheets/style.css"/>
+        <link rel="stylesheet" href="Stylesheets/chart.css"/>      
+        <script src="Histogram_Numerical.js"></script>
+        <script src="ScatterPlot.js"></script>
+        <script src="BarGraph_categorical.js"></script>
+        <script src="helper.js"></script>
+
+    </head>
+
+    <body>
+       
+        <div class="navbar">
+            <div class="dropdown">
+                <button onclick="PlotOverall()" class="dropbtn">Plot Bar Graph/ Histogram
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a id = "OvaButton" class="active" href="#" onclick="PlotOverall()">Player's Overall Rating </a>
+                    <a id = "AgeButton" href="#" onclick="PlotAge()">Age</a>
+                    <a id = "NationButton" href="#" onclick="PlotNationality()">Nationality</a>
+                    <a id = "ClubButton" href="#" onclick="PlotClub()">Club</a>
+                    <a id = "PlayPosButton" href="#" onclick="PlotPlayingPosition()">Playing Position</a>
+                    <a id = "HeightButton" href="#" onclick="PlotHeight()">Height</a>
+                    <a id = "WeightButton" href="#" onclick="PlotWeight()">Weight</a>
+                    <a id = "FootButton" href="#" onclick="PlotFoot()">Foot</a>
+                    <!-- <a id = "ValueButton" href="#" onclick="PlotValue()">Value</a>
+                    <a id = "WageButton" href="#" onclick="PlotWage()">Wage</a> -->
+                    <a id = "PaceButton" href="#" onclick="PlotPace()">Pace</a>
+                    <a id = "ShotButton" href="#" onclick="PlotShot()">Shot</a>
+                    <a id = "PassButton" href="#" onclick="PlotPass()">Pass</a>
+                    <a id = "DefendButton" href="#" onclick="PlotDefend()">Defend</a>
+                    <a id = "PhysicalButton" href="#" onclick="PlotPhysical()">Physical</a>
+                    <a id = "GoalkeepingButton" href="#" onclick="PlotGoalkeeping()">Goalkeeping</a>
+                    <a id = "PenaltiesButton" href="#" onclick="PlotPenalties()">Penalties</a>
+                    <a id = "CrossingButton" href="#" onclick="PlotCrossing()">Crossing</a>
+                    <a id = "FinishingButton" href="#" onclick="PlotFinishing()">Finishing</a>
+                    <a id = "DribblingButton" href="#" onclick="PlotDribbling()">Dribbling</a>
+                </div>
+            </div>
+           
+
+            <div id="svgbox" class="svgbox" >
+                <svg id="mysvg" width="1200" height="500" className="chart"></svg>
+            </div>
+            <div >
+                <a style ="color:white" id = "ScatterButton" href="#" onclick="PlotScatterDefault()">Scatter Plot</a>
+            </div>    
+            <!-- Select X variable for Scatter plot-->
+            <div class="dropdownXScatter">
+                <button class="dropbtnXScatter" onclick="PlotScatterDefault()">Scatter Plot -X
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-contentXScatter">
+                    <a id = "Player's Overall Rating" class="active" href="#" onclick="GetIDScatterX(this.id)">Player's Overall Rating</a>
+                    <a id = "Age" href="#" onclick="GetIDScatterX(this.id)">Age</a>
+                    <a id = "Height" href="#" onclick="GetIDScatterX(this.id)">Height</a>
+                    <a id = "Weight" href="#" onclick="GetIDScatterX(this.id)">Weight</a>
+                     <!-- <a id = "Nationality" href="#" onclick="GetIDScatterX(this.id)">Nationality</a>
+                   <a id = "Club" href="#" onclick="GetIDScatterX(this.id)">Club</a>
+                   <a id = "Playing Position" href="#" onclick="GetIDScatterX(this.id)">Playing Position</a>
+                    <a id = "Foot" href="#" onclick="GetIDScatterX(this.id)">Foot</a>
+                    <a id = "Value" href="#" onclick="GetIDScatterX(this.id)">Value</a>
+                    <a id = "Wage" href="#" onclick="GetIDScatterX(this.id)">Wage</a> -->
+                    <a id = "Pace" href="#" onclick="GetIDScatterX(this.id)">Pace</a>
+                    <a id = "Shot" href="#" onclick="GetIDScatterX(this.id)">Shot</a>
+                    <a id = "Pass" href="#" onclick="GetIDScatterX(this.id)">Pass</a>
+                    <a id = "Defend" href="#" onclick="GetIDScatterX(this.id)">Defend</a>
+                    <a id = "Physical" href="#" onclick="GetIDScatterX(this.id)">Physical</a>
+                    <a id = "Goalkeeping" href="#" onclick="GetIDScatterX(this.id)">Goalkeeping</a>
+                    <a id = "Penalties" href="#" onclick="GetIDScatterX(this.id)">Penalties</a>
+                    <a id = "Crossing" href="#" onclick="GetIDScatterX(this.id)">Crossing</a>
+                    <a id = "Finishing" href="#" onclick="GetIDScatterX(this.id)">Finishing</a>
+                    <a id = "Dribbling" href="#" onclick="GetIDScatterX(this.id)">Dribbling</a>
+                </div>
+            </div>
+
+            <!-- Select Y variable for Scatter plot-->
+            <div class="dropdownYScatter">
+                <button class="dropbtnYScatter">Scatter Plot -Y
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-contentYScatter">
+                    <a id = "Player's Overall Rating" class="active" href="#" onclick="GetIDScatterY(this.id)">Player's Overall Rating</a>
+                    <a id = "Age" href="#" onclick="GetIDScatterY(this.id)">Age</a>
+                    <a id = "Height" href="#" onclick="GetIDScatterY(this.id)">Height</a>
+                    <a id = "Weight" href="#" onclick="GetIDScatterY(this.id)">Weight</a>
+                    <!-- <a id = "Nationality" href="#" onclick="GetIDScatterY(this.id)">Nationality</a>
+                    <a id = "Club" href="#" onclick="GetIDScatterY(this.id)">Club</a>
+                    <a id = "Playing Position" href="#" onclick="GetIDScatterY(this.id)">Playing Position</a>
+                    <a id = "Foot" href="#" onclick="GetIDScatterY(this.id)">Foot</a>
+                    <a id = "Value" href="#" onclick="GetIDScatterY(this.id)">Value</a>
+                    <a id = "Wage" href="#" onclick="GetIDScatterY(this.id)">Wage</a> -->
+                    <a id = "Pace" href="#" onclick="GetIDScatterY(this.id)">Pace</a>
+                    <a id = "Shot" href="#" onclick="GetIDScatterY(this.id)">Shot</a>
+                    <a id = "Pass" href="#" onclick="GetIDScatterY(this.id)">Pass</a>
+                    <a id = "Defend" href="#" onclick="GetIDScatterY(this.id)">Defend</a>
+                    <a id = "Physical" href="#" onclick="GetIDScatterY(this.id)">Physical</a>
+                    <a id = "Goalkeeping" href="#" onclick="GetIDScatterY(this.id)">Goalkeeping</a>
+                    <a id = "Penalties" href="#" onclick="GetIDScatterY(this.id)">Penalties</a>
+                    <a id = "Crossing" href="#" onclick="GetIDScatterY(this.id)">Crossing</a>
+                    <a id = "Finishing" href="#" onclick="GetIDScatterY(this.id)">Finishing</a>
+                    <a id = "Dribbling" href="#" onclick="GetIDScatterY(this.id)">Dribbling</a>
+                </div>
+
+            </div>
+  
+
+        </div>
+
+
+    </body>
+    <div class="row">
+        <div class="column">
+            <img src="Ronaldo1.jpg" alt="Rating card1" width="200" height="250">
+        </div>
+        <div class="column">
+            <img src="Neymar.jpg" alt="Rating card2" width="200" height="250" >
+        </div>
+        <div class="column">
+            <img src="Mbappe.jpg" alt="Rating card2" width="200" height="250">
+        </div>
+        <div class="column">
+            <img src="Ramos.jpg" alt="Rating card2" width="200" height="250">
+        </div>
+        <div class="column">
+            <img src="DeBruyne.jpg" alt="Rating card2" width="200" height="250">
+        </div>
+      </div>
+
+      <!-- <div id="TextBox" class="Textbox">
+        <h1>Press and Drag to Change bins in the Graph</h1></div> -->
+
+</html>

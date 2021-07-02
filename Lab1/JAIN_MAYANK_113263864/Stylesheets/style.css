@@ -1,0 +1,268 @@
+.column {
+  float: left;
+  margin-left: 150px;
+  width:10%;
+  padding: 2px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.Textbox{
+  font-family: "sans-serif";
+  font-size: 12px;
+  background-color: #0e0c0c;
+  opacity: 0.75;
+  margin-top: 40px;
+  margin-left: 620px;
+  margin-right: 825px;
+  color: rgb(249, 249, 253);
+  
+}
+
+body {
+  background-image: url("/fifa-21.jpg");
+  background-repeat: no-repeat;
+  background-size: 1920px 1080px;
+  opacity: 0.95;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+li a {
+    display: block;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #333;
+}
+
+li a.active {
+    background-color: rgb(8, 8, 17);
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+.bar {
+    fill: rgb(10, 61, 155);
+    stroke: white;
+}
+
+.highlight {
+    fill:red;
+
+}
+
+.links line {
+    stroke: #999;
+    stroke-opacity: 0.6;
+}
+
+.nodes circle {
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+
+.grid line {
+    stroke: rgb(60, 66, 117);
+    stroke-opacity: 0.9
+}
+
+.tick text{
+    fill:rgb(206, 189, 36);
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: rgb(20, 20, 20);
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(253, 251, 251);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(7, 4, 4);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f7faf6;
+
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: rgb(5, 6, 7);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  color: rgb(25, 122, 187);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.dropdownXScatter {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdownXScatter .dropbtnXScatter {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(253, 251, 251);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdownXScatter:hover .dropbtnXScatter {
+  background-color: rgb(7, 4, 4);
+}
+
+.dropdown-contentXScatter {
+  display: none;
+  position: absolute;
+  background-color: #f7faf6;
+  left: 300px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-contentXScatter a {
+  float: none;
+  color: rgb(5, 6, 7);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-contentXScatter a:hover {
+  color: rgb(25, 122, 187);
+}
+
+.dropdownXScatter:hover .dropdown-contentXScatter {
+  display: block;
+}
+
+.dropdownYScatter {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdownYScatter .dropbtnYScatter {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(253, 251, 251);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdownYScatter:hover .dropbtnYScatter {
+  background-color: rgb(7, 4, 4);
+}
+
+.dropdown-contentYScatter {
+  display: none;
+  position: absolute;
+  background-color: #f7faf6;
+  left: 450px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-contentYScatter a {
+  float: none;
+  color: rgb(5, 6, 7);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-contentYScatter a:hover {
+  color: rgb(25, 122, 187);
+}
+
+.dropdownYScatter:hover .dropdown-contentYScatter {
+  display: block;
+}
+
+
+.ToggleClass .Togglebutton{
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  left: 500px;
+  color: rgb(253, 251, 251);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.svgbox path {
+  stroke: white;
+}
+
+.mysvg path {
+  stroke: white
+}
